@@ -67,7 +67,7 @@ const RoadmapPhases = () => {
                                         <ul className="text-slate-300 list-disc text-base mx-2 ">
                                             <li>Launch the AddOn Ai Monetiser platform and API.</li>
                                             <li>Deploy the AI Ad Agent Creator Web App.</li>
-                                            <li>Initiate AMA (Ask Me Anything) sessions across Twitter, Telegram, and YouTube to highlight the platform[`'`]s capabilities.</li>
+                                            <li>Initiate AMA (Ask Me Anything) sessions across Twitter, Telegram, and YouTube to highlight the platform{`'`}s capabilities.</li>
                                             <li>Use the incentive fund to attract and onboard new projects through appealing offers.</li>
                                             <li>Assemble an ambassador team to strengthen brand presence.</li>
                                             <li>Expand the AddOn Ai team to support operational growth and enhance development.</li>
