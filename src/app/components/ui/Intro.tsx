@@ -1,26 +1,14 @@
-"use client"
-
-import { useEffect, useState } from "react"
-import { useTheme } from "next-themes"
-import { Particles } from "./particles"
+import { ParticlesDemo } from "./particle-effect"
 
 
 
 export function Intro() {
-  const { theme } = useTheme()
-  const [color, setColor] = useState("#ffffff")
-
-
-
-  useEffect(() => {
-    setColor(theme === "dark" ? "#ffffff" : "#000000")
-  }, [theme])
 
   return (
     <div className="bg-[url(/glow-top2.svg)] z-10 relative flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-background md:shadow-xl bg-cover bg-no-repeat">
       <section className="text-gray-600 body-font bg-[url(/glow-bottom2.svg)] bg-cover bg-no-repeat w-fit h-2/3 md:h-full rounded-t-xl">
         <span className="pointer-events-none whitespace-pre-wrap justify-center flex pt-20 bg-gradient-to-b from-green-900 to-gray-200  bg-clip-text text-center text-7xl font-bold leading-none text-transparent dark:from-white dark:to-slate-900/10">
-          Addon Ai
+          Addon AI
         </span>
         <div className="container mx-auto flex px-5 py-10 items-center justify-center flex-col">
           <div className="text-center lg:w-2/3 w-full">
@@ -114,13 +102,7 @@ export function Intro() {
           </div>
         </div>
       </section>
-      <Particles
-        className="absolute inset-0"
-        quantity={100}
-        ease={80}
-        color={color}
-        refresh
-      />
+        <ParticlesDemo />
     </div>
   )
 }
