@@ -9,11 +9,11 @@ const RoadmapPhases = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" width="434" height="427">
                             <defs>
                                 <linearGradient id="bs4-a" x1="19.609%" x2="50%" y1="14.544%" y2="100%">
-                                    <stop offset="0%" stop-color="#064E3B"></stop>
-                                    <stop offset="100%" stop-color="#14532D" stop-opacity="0"></stop>
+                                    <stop offset="0%" stopColor="#064E3B"></stop>
+                                    <stop offset="100%" stopColor="#14532D" stopOpacity="0"></stop>
                                 </linearGradient>
                             </defs>
-                            <path fill="url(#bs4-a)" fill-rule="evenodd" d="m0 0 461 369-284 58z" transform="matrix(1 0 0 -1 0 427)"></path>
+                            <path fill="url(#bs4-a)" fillRule="evenodd" d="m0 0 461 369-284 58z" transform="matrix(1 0 0 -1 0 427)"></path>
                         </svg>
                     </div>
 
@@ -36,7 +36,7 @@ const RoadmapPhases = () => {
                                     <div>
                                         <div className="flex items-center space-x-2 mb-1">
 
-                                            <h4 className=" text-slate-50 mb-3 font-semibold">Phase 1 – Foundation and Launch</h4>
+                                            <h4 className=" text-slate-50 mb-3 font-semibold">Phase 1 - Foundation and Launch</h4>
                                         </div>
                                         <ul className="text-slate-300 list-disc text-base mx-2 ">
                                             <li>Project idea implementation and initial development of AI agent tools.</li>
@@ -50,24 +50,24 @@ const RoadmapPhases = () => {
                                     <div>
                                         <div className="flex items-center space-x-2 mb-1">
 
-                                            <h4 className=" text-slate-50 mb-3 font-semibold">Phase 2 – Expansion and Collaboration</h4>
+                                            <h4 className=" text-slate-50 mb-3 font-semibold">Phase 2 - Expansion and Collaboration</h4>
                                         </div>
                                         <ul className="text-slate-300 list-disc text-base mx-2 ">
                                             <li>Launch targeted marketing campaigns to promote awareness.</li>
                                             <li>Establish partnerships with DeFi projects, offering pre-booked free ad deals (3-day ad packages) upon AI ad agent launch.</li>
-                                            <li>Conduct a full audit of our upcoming web app’s smart contract.</li>
+                                            <li>Conduct a full audit of our upcoming web app{`'`}s smart contract.</li>
                                             <li>Initiate internal and external testing to ensure platform stability.</li>
                                         </ul>
                                     </div>
                                     <div>
                                         <div className="flex items-center space-x-2 mb-1">
 
-                                            <h4 className=" text-slate-50 mb-3 font-semibold">Phase 3 – Product Rollout and Scaling</h4>
+                                            <h4 className=" text-slate-50 mb-3 font-semibold">Phase 3 - Product Rollout and Scaling</h4>
                                         </div>
                                         <ul className="text-slate-300 list-disc text-base mx-2 ">
                                             <li>Launch the AddOn Ai Monetiser platform and API.</li>
                                             <li>Deploy the AI Ad Agent Creator Web App.</li>
-                                            <li>Initiate AMA (Ask Me Anything) sessions across Twitter, Telegram, and YouTube to highlight the platform's capabilities.</li>
+                                            <li>Initiate AMA (Ask Me Anything) sessions across Twitter, Telegram, and YouTube to highlight the platform[`'`]s capabilities.</li>
                                             <li>Use the incentive fund to attract and onboard new projects through appealing offers.</li>
                                             <li>Assemble an ambassador team to strengthen brand presence.</li>
                                             <li>Expand the AddOn Ai team to support operational growth and enhance development.</li>
@@ -76,7 +76,7 @@ const RoadmapPhases = () => {
                                     <div>
                                         <div className="flex items-center space-x-2 mb-1">
 
-                                            <h4 className=" text-slate-50 mb-3 font-semibold">Phase 4 – Future Growth and Innovation</h4>
+                                            <h4 className=" text-slate-50 mb-3 font-semibold">Phase 4 - Future Growth and Innovation</h4>
                                         </div>
                                         <ul className="text-slate-300 list-disc text-base mx-2 ">
                                             <li>Introduce a new whitepaper and roadmap to align with evolving market conditions and platform advancements.</li>

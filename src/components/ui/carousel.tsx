@@ -1,5 +1,6 @@
 "use client";
 import { IconArrowNarrowRight } from "@tabler/icons-react";
+import Image from "next/image";
 import { useState, useRef, useId, useEffect } from "react";
 
 interface SlideData {
@@ -69,7 +70,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
       <li
         ref={slideRef}
-        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[60vmin] h-[40vmin] mx-[4vmin] z-10 "
+        className="flex flex-1 flex-col items-center justify-center md:pl-24 relative text-start text-white opacity-100 transition-all duration-300 ease-in-out w-[60vmin] h-[40vmin] mx-[4vmin] z-10 "
         onClick={() => handleSlideClick(index)}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
@@ -83,7 +84,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         }}
       >
         <div
-          className="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-green-900 to-gray rounded-[5%] overflow-hidden transition-all duration-150 ease-out"
+          className="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-green-800 to-gray rounded-[5%] overflow-hidden transition-all duration-150 ease-out"
           style={{
             transform:
               current === index
@@ -91,8 +92,8 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
                 : "none",
           }}
         >
-          <img
-            className="absolute inset-0 ml-3 mt-3 w-[15%] transition-opacity duration-600 ease-in-out"
+          <Image
+            className="absolute inset-0 ml-3 mt-3 md:mt-6 w-[15%] transition-opacity duration-600 ease-in-out"
             style={{
               opacity: current === index ? 1 : 0.5,
             }}
@@ -101,6 +102,8 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             onLoad={imageLoaded}
             loading="eager"
             decoding="sync"
+            width={200}
+            height={200}
           />
           {current === index && (
             <div className="absolute inset-0 bg-black/30 transition-all duration-1000" />
@@ -114,10 +117,10 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         >
           <h2 className="text-md md:text-2xl lg:text-3xl font-semibold  relative">
             {title}
-            <div className="text-base justify-center mt-9">{slide.desc}</div>
+            <div className="text-base justify-center mt-10 md:right-10 md:top-4 bg-gradient-to-t from-gray-600 to-gray-200 bg-clip-text text-center font-bold leading-none text-transparent dark:from-white dark:to-slate-900/10  md:text-center relative">{slide.desc}</div>
           </h2>
           <div className="flex justify-center">
-            <button className="px-4 py-2 w-fit mx-auto sm:text-sm text-white h-12 border border-transparent text-lg ml-96 mt-32 fixed hover:shadow-lg transition duration-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
+            <button className="px-4 py-2 md:mx-auto md:right-2 md:top-44 w-fit mx-auto sm:text-sm text-white h-12 border border-transparent text-lg ml-96 mt-32 fixed hover:shadow-lg transition duration-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
               {button}
             </button>
           </div>
@@ -140,7 +143,7 @@ const CarouselControl = ({
 }: CarouselControlProps) => {
   return (
     <button
-      className={`w-10 h-10 flex items-center mx-2 justify-center bg-gradient-to-l from-green-400 to-gray dark:bg-neutral-800 border-3 border-transparent rounded-full focus:border-[#6D64F7] focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${
+      className={`w-10 h-10 md:mt-28 flex items-center mx-2 justify-center bg-gradient-to-l from-green-400 to-gray dark:bg-neutral-800 border-3 border-transparent rounded-full focus:border-[#6D64F7] focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${
         type === "previous" ? "rotate-180" : ""
       }`}
       title={title}

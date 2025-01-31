@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const sectionFooter = () => {
@@ -17,11 +18,11 @@ const sectionFooter = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" width="434" height="427">
                                 <defs>
                                     <linearGradient id="bs2-a" x1="19.609%" x2="50%" y1="14.544%" y2="100%">
-                                        <stop offset="0%" stop-color="#16A34A"></stop>
-                                        <stop offset="100%" stop-color="#6EE7B7" stop-opacity="0"></stop>
+                                        <stop offset="0%" stopColor="#16A34A"></stop>
+                                        <stop offset="100%" stopColor="#6EE7B7" stopOpacity="0"></stop>
                                     </linearGradient>
                                 </defs>
-                                <path fill="url(#bs2-a)" fill-rule="evenodd" d="m346 898 461 369-284 58z" transform="translate(-346 -898)"></path>
+                                <path fill="url(#bs2-a)" fillRule="evenodd" d="m346 898 461 369-284 58z" transform="translate(-346 -898)"></path>
                             </svg>
 
                         </div>
@@ -35,11 +36,11 @@ const sectionFooter = () => {
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="342" height="393">
                                                     <defs>
                                                         <linearGradient id="bs-a" x1="19.609%" x2="50%" y1="14.544%" y2="100%">
-                                                            <stop offset="0%" stop-color="#34D399"></stop>
-                                                            <stop offset="100%" stop-color="#34D399" stop-opacity="0"></stop>
+                                                            <stop offset="0%" stopColor="#34D399"></stop>
+                                                            <stop offset="100%" stopColor="#34D399" stopOpacity="0"></stop>
                                                         </linearGradient>
                                                     </defs>
-                                                    <path fill="url(#bs-a)" fill-rule="evenodd" d="m104 .827 461 369-284 58z" transform="translate(0 -112.827)" opacity=".7"></path>
+                                                    <path fill="url(#bs-a)" fillRule="evenodd" d="m104 .827 461 369-284 58z" transform="translate(0 -112.827)" opacity=".7"></path>
                                                 </svg>
 
                                             </div>
@@ -66,16 +67,16 @@ const sectionFooter = () => {
                                                         Learn More
                                                         <svg className="icon" viewBox="0 0 24 24" fill="currentColor">
                                                             <path
-                                                                fill-rule="evenodd"
+                                                                fillRule="evenodd"
                                                                 d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                                                                clip-rule="evenodd"
+                                                                clipPath="evenodd"
                                                             ></path>
                                                         </svg>
                                                     </button>
                                                 </div>
                                             </div>
                                             <div className="relative w-full h-64 md:h-auto overflow-hidden">
-                                                <img className="bg-[url(/addon-bgrem.png)] bg-no-repeat bg-cover absolute bottom-0 left-1/2 -translate-x-1/2 mx-auto max-w-none md:relative md:left-0 md:translate-x-0 transform rotate-90" src="./images/addongrid-removebg-preview.png" width="504" height="400" alt="Feature 01" />
+                                                <Image className="bg-[url(/addon-bgrem.png)] bg-no-repeat bg-cover absolute bottom-0 left-1/2 -translate-x-1/2 mx-auto max-w-none md:relative md:left-0 md:translate-x-0 transform rotate-90" src="/addon-bgrem.png" width={504} height={400} alt="Feature 01" />
 
                                             </div>
                                         </div>
