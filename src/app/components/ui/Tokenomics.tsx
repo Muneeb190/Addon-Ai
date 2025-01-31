@@ -1,6 +1,7 @@
 'use client'
 
 import logo from '@/app/assets/logo.png'
+import Image from 'next/image';
 import React, { useState } from "react";
 
 const Tokenomics = () => {
@@ -31,7 +32,7 @@ const Tokenomics = () => {
               <h3 className="py-5 bg-clip-text text-transparent text-5xl font-bold bg-gradient-to-r from-green-700 via-slate-200 to-slate-200/60 pb-3">
                 Tokenomics
               </h3>
-              <p className="text-xl py-2 font-semibold text-slate-400 mb-8">
+              <p className="text-xl py-2 font-semibold text-slate-400 mb-8 ">
                 The AddOn AI ecosystem is powered by $ADDON, the native token that drives transactions, incentives, and platform growth.
               </p>
 
@@ -82,7 +83,7 @@ const Tokenomics = () => {
                 {/* Image */}
                 <div className="flex items-center justify-center">
                   <div className="relative w-48 h-48 flex justify-center items-center">
-                    <img className="" src={logo.src} width="264" height="264" alt="Token Icon" />
+                    <Image className="" src={logo.src} width={264} height={264} alt="Token Icon" />
                   </div>
                 </div>
               </div>
