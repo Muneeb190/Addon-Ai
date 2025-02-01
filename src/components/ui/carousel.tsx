@@ -110,21 +110,24 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
           )}
         </div>
 
+
         <article
-          className={`relative p-[4vmin] transition-opacity duration-1000 ease-in-out ${
-            current === index ? "opacity-100 visible" : "opacity-0 invisible"
-          }`}
+          className={`relative p-4 sm:p-[4vmin] mt-[100] sm:mt-[120] md:mt-[50px] transition-opacity duration-1000 ease-in-out ${current === index ? "opacity-100 visible" : "opacity-0 invisible"
+            }`}
         >
-          <h2 className="text-md md:text-2xl lg:text-3xl font-semibold  relative">
-            {title}
-            <div className="text-base justify-center mt-10 md:right-10 md:top-4 bg-gradient-to-t from-gray-600 to-gray-200 bg-clip-text text-center font-bold leading-none text-transparent dark:from-white dark:to-slate-900/10  md:text-center relative">{slide.desc}</div>
+          <h2 className="text-sm sm:text-md md:text-xl lg:text-2xl font-semibold ml-[10] line-clamp-2">
+            <div className="ml-6">{title}</div>
+            <div className="text-xs sm:text-sm md:text-base mt-4 sm:mt-6 bg-gradient-to-t from-gray-600 to-gray-200 bg-clip-text text-center font-bold leading-tight text-transparent dark:from-white dark:to-slate-900/10 line-clamp-3">
+              {slide.desc}
+            </div>
           </h2>
-          <div className="flex justify-center">
-            <button className="px-4 py-2 md:mx-auto md:right-2 md:top-44 w-fit mx-auto sm:text-sm text-white h-12 border border-transparent text-lg ml-96 mt-32 fixed hover:shadow-lg transition duration-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
+          <div className="flex justify-center mt-4 sm:mt-6">
+            <button className="px-3 sm:px-4 py-2 text-xs sm:text-sm text-white rounded-md bg-green-600 hover:bg-green-700 transition duration-200 shadow-md">
               {button}
             </button>
           </div>
         </article>
+
       </li>
     </div>
   );
@@ -143,9 +146,8 @@ const CarouselControl = ({
 }: CarouselControlProps) => {
   return (
     <button
-      className={`w-10 h-10 md:mt-28 flex items-center mx-2 justify-center bg-gradient-to-l from-green-400 to-gray dark:bg-neutral-800 border-3 border-transparent rounded-full focus:border-[#6D64F7] focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${
-        type === "previous" ? "rotate-180" : ""
-      }`}
+      className={`w-10 h-10 md:mt-28 flex items-center mx-2 justify-center bg-gradient-to-l from-green-400 to-gray dark:bg-neutral-800 border-3 border-transparent rounded-full focus:border-[#6D64F7] focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${type === "previous" ? "rotate-180" : ""
+        }`}
       title={title}
       onClick={handleClick}
     >
@@ -158,8 +160,11 @@ interface CarouselProps {
   slides: SlideData[];
 }
 
+// ... (all previous imports and interfaces remain the same)
+
 export function Carousel({ slides }: CarouselProps) {
   const [current, setCurrent] = useState(0);
+  const id = useId();
 
   const handlePreviousClick = () => {
     const previous = current - 1;
@@ -177,11 +182,9 @@ export function Carousel({ slides }: CarouselProps) {
     }
   };
 
-  const id = useId();
-
   return (
     <div
-      className="relative w-[70vmin] h-[70vmin] mx-auto"
+      className="relative w-[60vmin] h-[70vmin] mx-auto mt-16 md:mt-24" // Added margin top here
       aria-labelledby={`carousel-heading-${id}`}
     >
       <ul
@@ -201,13 +204,12 @@ export function Carousel({ slides }: CarouselProps) {
         ))}
       </ul>
 
-      <div className="absolute flex justify-center w-full top-[calc(60%+1rem)]">
+      <div className="absolute flex justify-center  w-full top-[calc(70%+1rem)]">
         <CarouselControl
           type="previous"
           title="Go to previous slide"
           handleClick={handlePreviousClick}
         />
-
         <CarouselControl
           type="next"
           title="Go to next slide"
@@ -217,3 +219,4 @@ export function Carousel({ slides }: CarouselProps) {
     </div>
   );
 }
+
