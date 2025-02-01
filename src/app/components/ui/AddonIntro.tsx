@@ -15,7 +15,7 @@ const AddonIntro = () => {
                         Introduction
                     </h1>
                     <p className="text-sm sm:text-base leading-relaxed text-gray-400 bg-gradient-to-b from-gray-400 to-gray-200 bg-clip-text">
-                        Historically, ad monetization has been a cornerstone of Web2[`''`]s exponential growth, enabling the digital economy to reach trillions of dollars by providing scalable and sustainable revenue models. Despite the surge in AI-driven projects, this essential strategy remains underutilized, leaving substantial potential untapped. <br /><br />
+                        Historically, ad monetization has been a cornerstone of Web2[`'`]s exponential growth, enabling the digital economy to reach trillions of dollars by providing scalable and sustainable revenue models. Despite the surge in AI-driven projects, this essential strategy remains underutilized, leaving substantial potential untapped. <br /><br />
                         AddOn AI is here to change the game by bridging this gap and introducing innovative monetization solutions tailored specifically for the AI ecosystem. Our platform leverages the proven success of advertising monetization in Web2 and adapts it to meet the unique needs of modern AI agents and social projects. By offering a decentralized, user-friendly environment, AddOn AI empowers developers and project owners to seamlessly integrate advertising revenue streams, transforming their AI innovations into profitable ventures.
                     </p>
                 </div>
