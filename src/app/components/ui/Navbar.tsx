@@ -1,31 +1,43 @@
-'use client'
-import Image from 'next/image'
-import React from 'react'
-import logo from '@/app/assets/logo.png'
-
+'use client';
+import Image from 'next/image';
+import React, { useState } from 'react';
+import logo from '@/app/assets/logo.png';
+import { Menu, X } from 'lucide-react';
 
 export const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header className="text-white body-font bg-black">
-      <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center lg:max-w-full px-12">
-        <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-          <Image
-            src={logo}
-            alt=''
-            height={96}
-            width={96}
-          />
+    <header className="text-white body-font bg-black fixed w-full z-50">
+      <div className="container mx-auto flex justify-between items-center py-4 px-6 ">
+        <button
+          className="md:hidden text-white focus:outline-none"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X size={32} /> : <Menu size={32} />}
+        </button>
+        
+        <a className="flex title-font font-medium items-center text-gray-900 mx-auto md:mx-0">
+          <Image src={logo} alt="logo" height={48} width={48} />
         </a>
-        <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center cursor-pointer">
-          <a className="mr-14 text-lg hover:text-gray-400 transition-all duration-200">Home</a>
-          <a className="mr-14 text-lg hover:text-gray-400 transition-all duration-200">About</a>
-          <a className="mr-14 text-lg hover:text-gray-400 transition-all duration-200">Models</a>
-          <a className="mr-14 text-lg hover:text-gray-400 transition-all duration-200">Tokenimcs</a>
-          <a className="mr-14 text-lg hover:text-gray-400 transition-all duration-200">Roadmap</a>
-          <a className="mr-14 text-lg hover:text-gray-400 transition-all duration-200">Socials</a>
+
+        <nav
+          className={`fixed top-0 left-0 h-full w-64 bg-black transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 md:static md:translate-x-0 md:flex md:items-center md:w-auto`}
+        >
+          <div className="flex flex-col md:flex-row md:space-x-6 items-center p-6 md:p-0">
+            <button className="self-start mb-6 md:hidden text-white" onClick={() => setIsOpen(false)}>
+              <X size={32} />
+            </button>
+            <a className="text-lg hover:text-gray-400 transition-all duration-200 py-2 md:py-0">Home</a>
+            <a className="text-lg hover:text-gray-400 transition-all duration-200 py-2 md:py-0">About</a>
+            <a className="text-lg hover:text-gray-400 transition-all duration-200 py-2 md:py-0">Models</a>
+            <a className="text-lg hover:text-gray-400 transition-all duration-200 py-2 md:py-0">Tokenomics</a>
+            <a className="text-lg hover:text-gray-400 transition-all duration-200 py-2 md:py-0">Roadmap</a>
+            <a className="text-lg hover:text-gray-400 transition-all duration-200 py-2 md:py-0">Socials</a>
+          </div>
         </nav>
 
-        <button className="button">
+        <button className="hidden md:flex button z">
           Use Bot
           <svg className="icon" viewBox="0 0 24 24" fill="currentColor">
             <path
@@ -35,10 +47,7 @@ export const Navbar = () => {
             ></path>
           </svg>
         </button>
-
-
       </div>
     </header>
-  )
-}
-
+  );
+};

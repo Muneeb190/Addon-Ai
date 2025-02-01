@@ -86,7 +86,7 @@ const Footer = () => {
                     </div>
 
 
-                    <div className="sm:col-span-12 lg:col-span-6 flex  justify-end text-sm text-slate-200 order-2 lg:order-none">
+                    <div className="sm:col-span-12 lg:col-span-6 flex justify-end text-sm text-slate-200 order-2 lg:order-none">
                         <div className="w-full lg:w-auto">
                             <p className="mb-4 w-[300px] lg:text-left text-lg text-center">
                                 Our mission is to empower businesses and individuals to streamline
