@@ -1,44 +1,117 @@
 'use client'
 import Image from 'next/image'
 import React from 'react'
-import logo from '@/app/assets/logo.png'
-
 
 export const Navbar = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
+
   return (
-    <header className="text-white body-font bg-black">
-      <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center lg:max-w-full px-12">
-        <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-          <Image
-            src={logo}
-            alt=''
-            height={96}
-            width={96}
-          />
-        </a>
-        <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center cursor-pointer">
-          <a className="mr-14 text-lg hover:text-gray-400 transition-all duration-200">Home</a>
-          <a className="mr-14 text-lg hover:text-gray-400 transition-all duration-200">About</a>
-          <a className="mr-14 text-lg hover:text-gray-400 transition-all duration-200">Models</a>
-          <a className="mr-14 text-lg hover:text-gray-400 transition-all duration-200">Tokenimcs</a>
-          <a className="mr-14 text-lg hover:text-gray-400 transition-all duration-200">Roadmap</a>
-          <a className="mr-14 text-lg hover:text-gray-400 transition-all duration-200">Socials</a>
-        </nav>
+    <header className="absolute w-full z-30" style={{ backgroundColor: 'black' }}>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="flex items-center justify-between h-16 md:h-20">
+          {/* Logo section remains unchanged */}
+          <div className="flex-1">
+            <a className="inline-flex" href="" aria-label="Cruip">
+              <img
+                className="max-w-none z-50"
+                src="./images/file.png"
+                width="70"
+                height="70"
+                alt="Stellar"
+              />
+            </a>
+          </div>
 
-        <button className="button">
-          Use Bot
-          <svg className="icon" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              fillRule="evenodd"
-              d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-              clipPath="evenodd"
-            ></path>
-          </svg>
-        </button>
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex md:grow navbar-text">
+            <ul className="flex grow justify-start flex-wrap items-center">
+              {['Home', 'About', 'Models', 'Tokenomics', 'Roadmap', 'Socials'].map((item) => (
+                <li key={item}>
+                  <a
+                    className="font-medium text-sm text-green hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out"
+                    href={`#${item.toLowerCase()}`}
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <button 
+              onClick={() => window.open('https://t.me/addonAiBot', '_blank')} 
+              className="bg-green-950 text-green-400 border border-green-400 border-b-4 font-medium overflow-hidden relative px-3 py-1 rounded-full hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group"
+            >
+              <span className="bg-green-400 shadow-green-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+              Use Bot
+            </button>
+          </nav>
 
+          {/* Mobile Navigation */}
+          <div className="md:hidden flex items-center ml-4">
+            <button
+              className="hamburger-menu"
+              aria-controls="mobile-nav"
+              aria-expanded={isMobileMenuOpen}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              <div className="menu-lines">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </button>
 
+            <nav
+              id="mobile-nav"
+              className={`absolute top-full z-20 right-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration2 300 ease-in-out ${
+                isMobileMenuOpen ? 'max-h-screen opacity100' : 'max-h0 opacity0'
+              }`}
+            >
+              <ul className="flex flex-col items-center border border-green600 rounded-lg px4 py4 my4 shadow2xl backdrop-filter backdrop-blur-lg bg-opacity20">
+                {['Home', 'About', 'Models', 'Tokenomics', 'Socials'].map((item) => (
+                  <li key={item}>
+                    <a
+                      className="flex font-medium text-sm text-green hover:text-white py2"
+                      href={`#${item.toLowerCase()}`}
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
+                
+                {/* Social Links */}
+                <div className="flex flex-row items-center justify-center mt10">
+                  {[
+                    ['Twitter', 'https://twitter.com/Addon_Ai'],
+                    ['Etherscan', 'https://etherscan.io/address/0xa579472f17b6E1b6C5dED2A785067a89EC536ce8'],
+                    ['Gitbook', 'https://addonai.gitbook.io'],
+                    ['Telegram', 'https://t.me/Addon_Ai'],
+                    ['Dextools', 'dextools.io/app/en/ether/pair-explorer/0xa579472f17b6E1b6C5dED2A785067a89EC536ce8']
+                  ].map(([label, url]) => (
+                    <li key={label} className="mx2 footer">
+                      <a
+                        className="flex justify-center items-center text-green500 hover:text-green400 transition duration150 ease-in-out"
+                        href={url}
+                        aria-label={label}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {/* Keep SVG icons here */}
+                      </a>
+                    </li>
+                  ))}
+                </div>
+                
+                <button 
+                  onClick={() => window.open('https://t.me/addonAiBot', '_blank')} 
+                  className="bg-green950 text-green400 border border-green400 border-b4 font-medium overflow-hidden relative px3 py1 rounded-full hover:brightness150 hover:border-t4 hover:border-b active:opacity75 outline-none duration300 group mt4"
+                >
+                  Use Bot
+                </button>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </div>
     </header>
   )
 }
-

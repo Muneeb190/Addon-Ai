@@ -1,15 +1,15 @@
 <svg width="2146" height="744" viewBox="0 0 2146 744" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clipPath="url(#clip0_344_39)">
+<g clip-path="url(#clip0_344_39)">
 <mask id="mask0_344_39" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-140" y="-177" width="2440" height="921">
 <path d="M-140 -177H2300V744H-140V-177Z" fill="white"/>
 </mask>
 <g mask="url(#mask0_344_39)">
-<path fillRule="evenodd" clipPath="evenodd" d="M-140 -177H2300V744H-140V-177Z" fill="url(#paint0_radial_344_39)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M-140 -177H2300V744H-140V-177Z" fill="url(#paint0_radial_344_39)"/>
 <g filter="url(#filter0_f_344_39)">
-<path fillRule="evenodd" clipPath="evenodd" d="M773 97L1234 466L950 524L773 97Z" fill="url(#paint1_linear_344_39)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M773 97L1234 466L950 524L773 97Z" fill="url(#paint1_linear_344_39)"/>
 </g>
 <g filter="url(#filter1_f_344_39)">
-<path fillRule="evenodd" clipPath="evenodd" d="M443.176 372L399.518 960.877L191.088 759.44L443.176 372Z" fill="url(#paint2_linear_344_39)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M443.176 372L399.518 960.877L191.088 759.44L443.176 372Z" fill="url(#paint2_linear_344_39)"/>
 </g>
 </g>
 <g filter="url(#filter2_f_344_39)">
@@ -49,29 +49,29 @@
 <feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur_344_39"/>
 </filter>
 <radialGradient id="paint0_radial_344_39" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(34624.2 -122175) rotate(-90) scale(189534 27004)">
-<stop stopColor="#5CCB7A"/>
-<stop offset="0.2235" stopColor="#32AD04"/>
-<stop offset="1" stopColor="#0F2A21" stopOpacity="0"/>
+<stop stop-color="#5CCB7A"/>
+<stop offset="0.2235" stop-color="#32AD04"/>
+<stop offset="1" stop-color="#0F2A21" stop-opacity="0"/>
 </radialGradient>
 <linearGradient id="paint1_linear_344_39" x1="9812.75" y1="6307.29" x2="22027.4" y2="43388.5" gradientUnits="userSpaceOnUse">
-<stop stopColor="#255412"/>
-<stop offset="1" stopColor="#45F250" stopOpacity="0"/>
+<stop stop-color="#255412"/>
+<stop offset="1" stop-color="#45F250" stop-opacity="0"/>
 </linearGradient>
 <linearGradient id="paint2_linear_344_39" x1="432.826" y1="11339.4" x2="-23243.5" y2="42382" gradientUnits="userSpaceOnUse">
-<stop stopColor="#255412"/>
-<stop offset="1" stopColor="#45F250" stopOpacity="0"/>
+<stop stop-color="#255412"/>
+<stop offset="1" stop-color="#45F250" stop-opacity="0"/>
 </linearGradient>
 <linearGradient id="paint3_linear_344_39" x1="30279.9" y1="4862.41" x2="31508.8" y2="34430.9" gradientUnits="userSpaceOnUse">
-<stop stopColor="#00DF30"/>
-<stop offset="1" stopColor="#061600"/>
+<stop stop-color="#00DF30"/>
+<stop offset="1" stop-color="#061600"/>
 </linearGradient>
 <linearGradient id="paint4_linear_344_39" x1="5649.27" y1="-28383.2" x2="35212.7" y2="-29728.3" gradientUnits="userSpaceOnUse">
-<stop stopColor="#00DF30"/>
-<stop offset="1" stopColor="#061600"/>
+<stop stop-color="#00DF30"/>
+<stop offset="1" stop-color="#061600"/>
 </linearGradient>
 <linearGradient id="paint5_linear_344_39" x1="28427.9" y1="4206.41" x2="29656.8" y2="33774.9" gradientUnits="userSpaceOnUse">
-<stop stopColor="#00DF30"/>
-<stop offset="1" stopColor="#061600"/>
+<stop stop-color="#00DF30"/>
+<stop offset="1" stop-color="#061600"/>
 </linearGradient>
 <clipPath id="clip0_344_39">
 <rect width="2146" height="744" fill="white"/>
