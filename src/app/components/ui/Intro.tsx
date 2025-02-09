@@ -3,7 +3,7 @@ import { ParticlesDemo } from "./particle-effect";
 export function Intro() {
   return (
     <div id="Home" className="bg-[url(/glow-top2.svg)] sm:bg-center z-10 relative flex h-auto w-auto flex-col items-center justify-center overflow-hidden bg-background md:shadow-xl bg-cover bg-no-repeat px-4 sm:px-6 lg:px-8">
-      <section className="text-gray-600 body-font bg-[url(/glow-bottom2.svg)] bg-cover bg-no-repeat w-full max-w-5xl h-auto md:h-full md:bottom-9 relative rounded-t-xl flex flex-col items-center text-center py-10">
+      <section className="text-gray-600 body-font bg-[url(/glow-bottom2.svg)] bg-cover bg-no-repeat max-w-5xl h-auto md:h-full md:bottom-9 relative flex flex-col items-center text-center py-10">
         <span className="pointer-events-none whitespace-pre-wrap justify-center flex pt-10 sm:pt-20 bg-gradient-to-b from-green-900 to-gray-200 bg-clip-text text-4xl sm:text-6xl font-bold leading-none text-transparent dark:from-white dark:to-slate-900/10">
           Addon AI
         </span>
