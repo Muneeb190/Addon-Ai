@@ -19,6 +19,7 @@
 <rect width="56" height="56" fill="white"/>
 </clipPath>
 </defs>
+<<<<<<< HEAD:public/carousel-icon-05.svg
 <!-- Code injected by live-server -->
 <script>
 	// <![CDATA[  <-- For SVG support
@@ -57,4 +58,6 @@
 	}
 	// ]]>
 </script>
+=======
+>>>>>>> dee8c9d6063125653cd076d3d9193979e551d654:images/carousel-icon-05.svg
 </svg>
