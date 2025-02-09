@@ -9,9 +9,14 @@ module.exports = {
   theme: {
   	extend: {
   		animation: {
-  			shimmer: 'shimmer 2s linear infinite'
+  			shimmer: 'shimmer 2s linear infinite',
+			endless: 'endless 10s linear infinite',
   		},
   		keyframes: {
+			endless: {
+				'0%': { transform: 'translateY(0)' },
+				'100%': { transform: 'translateY(-50%)' },
+			  },
   			shimmer: {
   				from: {
   					backgroundPosition: '0 0'

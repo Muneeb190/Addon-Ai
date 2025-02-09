@@ -3,7 +3,7 @@ import React from 'react'
 const RoadmapPhases = () => {
     return (
         <div>
-            <section className="relative h-auto w-full bg-black" id="roadmap">
+            <section className="relative h-auto w-full bg-black" id="Roadmap">
                 <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
                     <div className="absolute top-0 -mt-24 left-0 -ml-16 blur-2xl opacity-70 pointer-events-none -z-10" aria-hidden="true">
                         <svg xmlns="http://www.w3.org/2000/svg" width="434" height="427">

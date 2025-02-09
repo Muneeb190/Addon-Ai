@@ -8,17 +8,17 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="text-white body-font bg-black fixed w-full z-50">
-      <div className="container mx-auto flex justify-between items-center py-4 px-6 ">
+    <header id='nav' className="text-white body-font bg-black absolute w-full z-40">
+      <div className="container mx-auto flex justify-between items-center py- px-7 ">
         <button
           className="md:hidden text-white focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={32} /> : <Menu size={32} />}
         </button>
-        
-        <a className="flex title-font font-medium items-center text-gray-900 mx-auto md:mx-0">
-          <Image src={logo} alt="logo" height={48} width={48} />
+
+        <a href='' className="flex title-font font-medium items-center text-gray-900 mx-auto md:mx-0">
+          <Image src={logo} alt="logo" height={72} width={72} />
         </a>
 
         <nav
@@ -28,24 +28,18 @@ export const Navbar = () => {
             <button className="self-start mb-6 md:hidden text-white" onClick={() => setIsOpen(false)}>
               <X size={32} />
             </button>
-            <a className="text-lg hover:text-gray-400 transition-all duration-200 py-2 md:py-0">Home</a>
-            <a className="text-lg hover:text-gray-400 transition-all duration-200 py-2 md:py-0">About</a>
-            <a className="text-lg hover:text-gray-400 transition-all duration-200 py-2 md:py-0">Models</a>
-            <a className="text-lg hover:text-gray-400 transition-all duration-200 py-2 md:py-0">Tokenomics</a>
-            <a className="text-lg hover:text-gray-400 transition-all duration-200 py-2 md:py-0">Roadmap</a>
-            <a className="text-lg hover:text-gray-400 transition-all duration-200 py-2 md:py-0">Socials</a>
+            <a href='#Home' className="text-base hover:text-gray-400 transition-all duration-200 py-2 ">Home</a>
+            <a href='#About' className="text-base hover:text-gray-400 transition-all duration-200 py-2 ">About</a>
+            <a href='#Models' className="text-base hover:text-gray-400 transition-all duration-200 py-2 ">Models</a>
+            <a href='#Technology' className="text-base hover:text-gray-400 transition-all duration-200 py-2 ">Tokenomics</a>
+            <a href='#Roadmap' className="text-base hover:text-gray-400 transition-all duration-200 py-2 ">Roadmap</a>
+            <a href='#Contact' className="text-base hover:text-gray-400 transition-all duration-200 py-2 ">Socials</a>
           </div>
         </nav>
 
-        <button className="hidden md:flex button z">
+        <button onClick={() => window.open('https://t.me/addonAiBot', '_blank')} className="bg-green-950 text-green-400 border border-green-400 border-b-4 font-medium overflow-hidden relative px-3 py-1 rounded-full hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+          <span className="bg-green-400 shadow-green-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
           Use Bot
-          <svg className="icon" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              fillRule="evenodd"
-              d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-              clipPath="evenodd"
-            ></path>
-          </svg>
         </button>
       </div>
     </header>

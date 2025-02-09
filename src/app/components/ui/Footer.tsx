@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const Footer = () => {
     return (
-        <footer id="contact" className='bg-black'>
+        <footer id="Contact" className='bg-black'>
             <div className="max-w-6xl mx-auto px-4 sm:px-6">
                 <div className="grid sm:grid-cols-12 gap-8 py-8 md:py-12 footer">
                     <div className="sm:col-span-12 lg:col-span-6 order-1 lg:order-none">
@@ -88,11 +88,11 @@ const Footer = () => {
 
                     <div className="sm:col-span-12 lg:col-span-6 flex justify-end text-sm text-slate-200 order-2 lg:order-none">
                         <div className="w-full lg:w-auto">
-                            <p className="mb-4 w-[300px] lg:text-left text-lg text-center">
+                            <p className="mb-4 w-[300px] text-center relative left-12">
                                 Our mission is to empower businesses and individuals to streamline
                                 their monetization processes effectively and securely.
                             </p>
-                            <p className="lg:text-left text-lg text-center">
+                            <p className="lg:text-left text-center md:left-20 relative">
                                 © 2025 AddOn AI. All rights reserved.
                             </p>
                         </div>
