@@ -88,11 +88,11 @@ const Footer = () => {
 
                     <div className="sm:col-span-12 lg:col-span-6 flex justify-end text-sm text-slate-200 order-2 lg:order-none">
                         <div className="w-full lg:w-auto">
-                            <p className="mb-4 w-[300px] text-center relative left-12">
+                            <p className="mb-4 w-[300px] text-center relative left-6">
                                 Our mission is to empower businesses and individuals to streamline
                                 their monetization processes effectively and securely.
                             </p>
-                            <p className="lg:text-left text-center md:left-20 relative">
+                            <p className="lg:text-left text-center md:left-14 relative">
                                 © 2025 AddOn AI. All rights reserved.
                             </p>
                         </div>

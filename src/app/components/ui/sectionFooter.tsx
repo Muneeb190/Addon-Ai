@@ -67,7 +67,7 @@ const SectionFooter = () => {
                                                 </div>
                                             </div>
                                             <div className="relative w-full h-64 md:h-auto overflow-hidden">
-                                                <Image className="bg-[url(/addon-bgrem.png)] bg-no-repeat bg-cover absolute bottom-0 left-1/2 -translate-x-1/2 mx-auto max-w-none md:relative md:left-0 md:translate-x-0 transform rotate-90" src="/addon-bgrem.png" width={504} height={400} alt="Feature 01" />
+                                                <Image className="bg-no-repeat bg-cover absolute bottom-0 left-1/2 -translate-x-1/2 mx-auto max-w-none md:relative md:left-0 md:translate-x-0 transform rotate-90" src="/addon-bgrem.png" width={504} height={400} alt="Feature 01" />
                                             </div>
                                         </div>
                                     </div>
